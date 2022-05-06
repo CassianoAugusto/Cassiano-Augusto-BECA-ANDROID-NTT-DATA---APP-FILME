@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.appfilmes.R
-import com.example.appfilmes.adapter.AdapterProduto
+import com.example.appfilmes.adapter.ProdutoAdapter
 import com.example.appfilmes.models.ModelResult
 import com.example.appfilmes.models.Produto
 import com.example.appfilmes.repository.FilmeRetrofit
@@ -16,27 +16,26 @@ import retrofit2.Callback
 import retrofit2.Response
 
 
-
 class MainActivity : AppCompatActivity() {
-
+    var listFilmes:ModelResult?= null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        getdara()
+
+    }
+
+    private fun iniciandoRecyclerView(list : List<Produto>) {
 
         val recyclerView_produtos = findViewById<RecyclerView>(R.id.recyclerView_produtos)
         recyclerView_produtos.layoutManager = LinearLayoutManager(this)
         recyclerView_produtos.setHasFixedSize(true)
-       //Adapter
-        val listaProdutor: MutableList<Produto> = mutableListOf()
-        val adapterProduto = AdapterProduto(this,listaProdutor)
-        recyclerView_produtos.adapter = adapterProduto
-
-
-
-
-        getdara()
+        //Adapter
+        val produtoAdapter = list?.let { ProdutoAdapter(this, it) }
+        Log.i("TAG" ,"&&&&&&&&&&&&&&&&&&& $list")
+        recyclerView_produtos.adapter = produtoAdapter
 
     }
 
@@ -49,9 +48,10 @@ class MainActivity : AppCompatActivity() {
         call?.enqueue(object : Callback<ModelResult?> {
             override fun onResponse(call: Call<ModelResult?>, response: Response<ModelResult?>) {
                 if (response.isSuccessful){
-                    val teste:ModelResult? = response.body()
-                    val result :String = teste.toString()
-                    Log.i("TAG","******************** $result")
+                    val result :ModelResult?= response.body()
+                    var list = result?.results
+                    Log.i("TAG","******************** $list")
+                    list?.let { iniciandoRecyclerView(it) }
 
                 }
             }
@@ -61,4 +61,6 @@ class MainActivity : AppCompatActivity() {
             }
         })
     }
+
+
 }
