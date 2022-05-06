@@ -34,7 +34,7 @@ class ProdutoAdapter(private val context: Context, private val produtos:List<Pro
     override fun getItemCount(): Int = produtos.size
 
     inner class ProdutoViewHolder (itemView: View) :  RecyclerView.ViewHolder(itemView) {
-       val foto= itemView.findViewById<ImageView>(R.id.foto)
+        val foto= itemView.findViewById<ImageView>(R.id.foto)
         val title = itemView.findViewById<TextView>(R.id.nomefilme)
         val overview = itemView.findViewById<TextView>(R.id.descricao)
         val voto =itemView.findViewById<TextView>(R.id.voto)
