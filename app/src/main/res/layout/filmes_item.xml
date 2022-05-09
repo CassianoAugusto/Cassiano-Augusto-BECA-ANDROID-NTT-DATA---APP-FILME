@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools" >
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/itemm"
+    >
+
+
 
     <ImageView
         android:id="@+id/foto"
@@ -39,7 +44,7 @@
         android:layout_marginStart="140dp"
         android:layout_marginEnd="10dp"
         android:layout_marginTop="10dp"
-        android:maxLines="4"
+        android:maxLines="3"
         app:layout_constraintTop_toBottomOf="@+id/nomefilme"
         app:layout_constraintStart_toEndOf="@+id/foto"
         app:layout_constraintEnd_toEndOf="parent"

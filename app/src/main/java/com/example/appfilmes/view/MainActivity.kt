@@ -59,6 +59,7 @@ class MainActivity : AppCompatActivity() {
             override fun onFailure(call: Call<ModelResult?>, t: Throwable) {
                 Toast.makeText(applicationContext,"Ocorreu um error ao consultar a API",Toast.LENGTH_LONG).show()
             }
+
         })
     }
 

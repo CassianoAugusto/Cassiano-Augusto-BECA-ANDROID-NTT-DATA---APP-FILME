@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.example.appfilmes.R
 import com.example.appfilmes.models.Produto
@@ -20,6 +21,7 @@ class ProdutoAdapter(private val context: Context, private val produtos:List<Pro
         val itemLista = LayoutInflater.from(context).inflate(R.layout.filmes_item, parent,false)
         val holder = ProdutoViewHolder(itemLista)
         return holder
+
     }
 
     override fun onBindViewHolder(holder: ProdutoViewHolder, position: Int) {
@@ -29,6 +31,11 @@ class ProdutoAdapter(private val context: Context, private val produtos:List<Pro
         holder.title.text = produtos[position].title
         holder.overview.text=produtos[position].overview
         holder.voto.text = produtos[position].vote_average.toString()
+        holder.button.setOnClickListener{
+
+            val intent= SegundaTela.getIntent(this.context,produtos[position])
+            context.startActivity(intent)
+        }
     }
 
     override fun getItemCount(): Int = produtos.size
@@ -38,7 +45,7 @@ class ProdutoAdapter(private val context: Context, private val produtos:List<Pro
         val title = itemView.findViewById<TextView>(R.id.nomefilme)
         val overview = itemView.findViewById<TextView>(R.id.descricao)
         val voto =itemView.findViewById<TextView>(R.id.voto)
-
+        val button=itemView.findViewById<ConstraintLayout>(R.id.itemm )
 
     }
 
