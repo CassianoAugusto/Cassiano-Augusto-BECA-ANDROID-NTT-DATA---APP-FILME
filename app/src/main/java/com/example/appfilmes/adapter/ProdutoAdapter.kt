@@ -10,6 +10,7 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.example.appfilmes.R
 import com.example.appfilmes.models.Produto
+import com.example.appfilmes.view.SegundaTela
 import com.squareup.picasso.Picasso
 
 

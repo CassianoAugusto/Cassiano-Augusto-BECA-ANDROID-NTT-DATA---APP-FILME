@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.APPFILMES">
         <activity
-            android:name=".adapter.SegundaTela"
+            android:name=".view.SegundaTela"
             android:exported="false" />
         <activity
             android:name=".view.MainActivity"

@@ -1,4 +1,4 @@
-package com.example.appfilmes.adapter
+package com.example.appfilmes.view
 
 import android.content.Context
 import android.content.Intent
@@ -35,7 +35,7 @@ class SegundaTela : AppCompatActivity() {
             produto: Produto):Intent {
             val intent=Intent(context, SegundaTela::class.java)
             intent.putExtra("filmeid",produto.id)
-            intent.putExtra("capa",produto.poster_path)
+            intent.putExtra("capa",produto.backdrop_path)
             intent.putExtra("titulo",produto.title)
             intent.putExtra("descricao",produto.overview)
             return intent

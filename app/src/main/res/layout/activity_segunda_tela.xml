@@ -6,47 +6,48 @@
     android:background="@color/black"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".adapter.SegundaTela">
+    tools:context=".view.SegundaTela">
 
-    <ImageView
-        android:id="@+id/foto"
-        android:layout_width="400dp"
-        android:layout_height="500px"
-        android:layout_margin="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/nomefilme"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="12dp"
-        android:textColor="#FFEB3B"
-        android:textSize="40sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.75"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/foto"
-        app:layout_constraintVertical_bias="0.0"
-        tools:text="nomefilme" />
 
-    <TextView
-        android:id="@+id/descricao"
-        android:layout_width="364dp"
-        android:layout_height="357dp"
-        android:layout_marginLeft="8dp"
-        android:textColor="@color/white"
-        android:textSize="15sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.34"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nomefilme"
-        app:layout_constraintVertical_bias="0.944"
-        tools:text="descricao" />
+        <ImageView
+            android:id="@+id/foto"
+            android:layout_width="400dp"
+            android:layout_height="500px"
+            android:layout_margin="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/nomefilme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="nomedofilme"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="12dp"
+            android:textColor="#FFEB3B"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/foto"
+             />
+
+        <TextView
+            android:id="@+id/descricao"
+            android:layout_width="364dp"
+            android:layout_height="357dp"
+            android:layout_marginLeft="8dp"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.34"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nomefilme"
+            tools:text="descricao" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
