@@ -8,4 +8,9 @@
     <string name="overview">overview</string>
     <string name="vote_average">vote_average</string>
     <string name="backdrop_path">backdrop_path</string>
+    <string name="content_imagem_filme">imagem do filme que foi pesquisado na internet</string>
+    <string name="content_nome_do_filme">nome do filme pesquisado na internet</string>
+    <string name="content_descricao_do_filme">descricao do filme pesquisado na internet</string>
+    <string name="content_nota_filme">nota do filme pesquisado na internet</string>
+    <string name="nomedofilme">nomedofilme</string>
 </resources>

@@ -7,8 +7,10 @@ import retrofit2.http.Query
 
 interface Iweb {
     @GET("3/trending/movie/week?")
-    fun buscaWeb(@Query ("api_key")apikey:String,
-    @Query("language")linguagem:String): Call<ModelResult?>?
+    fun buscaWeb(
+        @Query("api_key") apikey: String,
+        @Query("language") linguagem: String
+    ): Call<ModelResult?>?
 
 }
 
